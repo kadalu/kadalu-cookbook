@@ -54,7 +54,14 @@ NAME                               READY   STATUS    RESTARTS   AGE     IP      
 minio-deployment-77d65cb56-mnx9t   1/1     Running   0          2m16s   172.17.0.9   minikube   <none>           <none>
 ```
 
-Now access minio here http://172.17.0.9:30000/minio/login
+Get the node port by running,
+
+```
+$ kubectl describe service minio-service | grep NodePort
+NodePort:                 <unset>  31119/TCP
+```
+
+Now access minio here http://172.17.0.9:31119/minio/login
 
 If the node IP is not externally accessible, then use port forwarding as
 below.
