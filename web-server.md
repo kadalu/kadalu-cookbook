@@ -1,4 +1,4 @@
-# Web server using Kadalu
+# Deploying a Web server
 
 Create a Persistent Volume Claim (PVC).
 
@@ -23,7 +23,7 @@ $ kubectl create -f webserver-pvc.yaml
 persistentvolumeclaim/webapp-pv created
 ```
 
-Verify the status pf PVC using,
+Verify the status of the PVC using,
 
 ```
 $ kubectl get pvc
@@ -61,7 +61,7 @@ $ kubectl create -f webserver-app.yaml
 pod/webapp created
 ```
 
-Verify the status of pod using,
+Verify the status of the pod using,
 
 ```
 $ kubectl get pods
